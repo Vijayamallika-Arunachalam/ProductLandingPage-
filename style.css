@@ -1,0 +1,162 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    transition: 0.4s;
+}
+
+/* Navigation bar using Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #5b4bdb;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+#themeToggle {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Hero section using Flexbox */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 70px 8%;
+    min-height: 350px;
+}
+
+.hero-content h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: #5b4bdb;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-image span {
+    font-size: 130px;
+}
+
+/* Product section using CSS Grid */
+.products {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 35px;
+    font-size: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.product-card p {
+    margin: 12px 0;
+}
+
+.buy-btn {
+    padding: 10px 25px;
+    background-color: #5b4bdb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #5b4bdb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Dark mode */
+.dark-mode {
+    background-color: #181818;
+    color: white;
+}
+
+.dark-mode .product-card {
+    background-color: #303030;
+    color: white;
+}
+
+.dark-mode .hero {
+    background-color: #181818;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
